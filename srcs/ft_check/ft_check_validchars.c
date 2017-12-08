@@ -6,12 +6,12 @@
 /*   By: flecouey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 13:12:31 by flecouey          #+#    #+#             */
-/*   Updated: 2017/12/08 13:55:37 by flecouey         ###   ########.fr       */
+/*   Updated: 2017/12/08 15:58:06 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "fillit.h"
+#include "../../libft.h"
+#include "../../fillit.h"
 
 /*
 ** Retourne 1 si le tetrimino passe en parametre ne contient que des caracteres valides.

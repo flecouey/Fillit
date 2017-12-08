@@ -6,7 +6,7 @@
 /*   By: flecouey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 13:52:15 by flecouey          #+#    #+#             */
-/*   Updated: 2017/12/08 15:31:48 by flecouey         ###   ########.fr       */
+/*   Updated: 2017/12/08 16:07:07 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,13 @@
 #include "../fillit.h"
 
 int		main(void)
-{
-	char	***tab;
-	int		rt;
+{	
+	char		**tab;
+	char		str[] = "....\n#...\n###.\n....\n....\n";
+	int			rt;
 
 	tab = NULL;
-	tab[0][0] = "....\n";
-	tab[0][1] = "#...\n";
-	tab[0][2] = "###.\n";
-	tab[0][3] = "....\n";
-	tab[1] = 0;
-
+	tab = ft_strsplit((const char*)str, '\n');
 	rt = ft_isvalid(tab);
 	ft_putnbr(rt);
 	ft_putchar('\n');

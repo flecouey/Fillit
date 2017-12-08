@@ -6,12 +6,12 @@
 /*   By: flecouey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 12:37:11 by flecouey          #+#    #+#             */
-/*   Updated: 2017/12/08 13:52:57 by flecouey         ###   ########.fr       */
+/*   Updated: 2017/12/08 16:08:17 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "fillit.h"
+#include "../../libft.h"
+#include "../../fillit.h"
 
 /*
 ** Retourne 1 si le tetrimino passe en parametre compte exactement 4 lignes et 4 colonnes.
