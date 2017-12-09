@@ -6,7 +6,7 @@
 /*   By: flecouey <flecouey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 23:12:08 by flecouey          #+#    #+#             */
-/*   Updated: 2017/12/08 16:08:21 by flecouey         ###   ########.fr       */
+/*   Updated: 2017/12/09 18:53:52 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 
 int			ft_check_arrangement(char **tetrimino);
 int			ft_check_blocksnb(char **tetrimino);
+
 int			ft_check_squaresnb(char **tetrimino);
 int			ft_check_validchars(char **tetrimino);
 char		**ft_fillit(char ***tab_input);

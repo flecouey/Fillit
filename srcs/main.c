@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_test_isvalid.c                                :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flecouey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/08 13:52:15 by flecouey          #+#    #+#             */
-/*   Updated: 2017/12/09 15:45:14 by flecouey         ###   ########.fr       */
+/*   Created: 2017/12/09 18:01:31 by flecouey          #+#    #+#             */
+/*   Updated: 2017/12/09 18:49:39 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-#include "../fillit.h"
 
 int		main(void)
-{	
-	char		**tab;
-	char		str[] = "....\n#...\n###.\n....\n....\n";
-	int			rt;
+{
+	char	*buf = "...#\n\n\n...#\n...#\n...#\n\n....\n....\n....\n####\n";
 
-	tab = NULL;
-	tab = ft_strsplit((const char*)str, '\n');
-	rt = ft_isvalid(tab);
-	ft_putnbr(rt);
-	ft_putchar('\n');
+	ft_putendl(ft_strsplit(buf, '\n')[4]);
 	return (0);
 }
