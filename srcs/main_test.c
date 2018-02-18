@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_test_isvalid.c                                :+:      :+:    :+:   */
+/*   main_test.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flecouey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 13:52:15 by flecouey          #+#    #+#             */
-/*   Updated: 2017/12/09 15:45:14 by flecouey         ###   ########.fr       */
+/*   Updated: 2018/02/18 16:27:31 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include "../fillit.h"
 
-int		main(void)
-{	
-	char		**tab;
-	char		str[] = "....\n#...\n###.\n....\n....\n";
-	int			rt;
-
-	tab = NULL;
-	tab = ft_strsplit((const char*)str, '\n');
-	rt = ft_isvalid(tab);
-	ft_putnbr(rt);
-	ft_putchar('\n');
+int		main(int argc, char **argv)
+{
+	(void)argc;
+	ft_putstr(ft_readfile(argv[1])[1][3]);
 	return (0);
 }

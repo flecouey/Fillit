@@ -6,7 +6,7 @@
 /*   By: flecouey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 16:09:00 by flecouey          #+#    #+#             */
-/*   Updated: 2017/12/07 13:41:23 by flecouey         ###   ########.fr       */
+/*   Updated: 2017/12/22 11:35:06 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,7 @@ size_t				ft_strwcount(const char *s, char c);
 size_t				ft_strwindex(const char *s, char c, size_t n);
 size_t				ft_strwleni(const char *s, char c, size_t i);
 size_t				ft_strwlenn(const char *s, char c, size_t n);
+size_t				ft_tablen(char **tab);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 

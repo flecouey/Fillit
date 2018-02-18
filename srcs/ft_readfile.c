@@ -6,7 +6,7 @@
 /*   By: flecouey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/09 15:45:43 by flecouey          #+#    #+#             */
-/*   Updated: 2018/01/27 12:51:22 by flecouey         ###   ########.fr       */
+/*   Updated: 2018/02/18 16:49:02 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,62 +15,55 @@
 
 #define BUF_SIZE 4096
 
-static size_t	ft_tablen(char **tab) // retourne le nombre de string dans le tableau, pratique
+static char		***ft_bufsplit(const char *buf, size_t nb_tetriminos)
 {
 	size_t		i;
-
-	i = 0;
-	while (tab[i])
-	{
-		i++;
-	}
-	return (i);
-}
-
-static char		***ft_bufsplit(char *buf)
-{
-	int			i;
+	size_t		j;
 	char		***tab;
-	char		**strsplit;
 
 	i = 0;
-	tab = NULL;
-	strsplit = ft_strsplit(buf, '\n');
-	if (!(tab = ft_memalloc(ft_tablen(strsplit))))
+	if (!(tab = ft_memalloc(nb_tetriminos + 1)))
 		return (NULL);
-	while (strplit[i])
+	while (i < nb_tetriminos)
 	{
-		
+		if (!(tab[i] = ft_memalloc(4 + 1)))
+			return (NULL);
+		j = 0;
 		while (j < 4)
 		{
-
+			if (!(tab[i][j] = ft_strnew(4 + 1)))
+				return (NULL);
+			tab[i][j] = ft_strsub(buf, i*20 + j*5 + i*(i == 0 ? 0 : 1), 4);
+			j++;
 		}
 		i++;
 	}
+	return (tab);
 }
 
 char			***ft_readfile(char *source_file)
 {
 	char		***tab;
 	int			fd;
-	int			len_read;
+	size_t		len_read;
+	size_t		nb_tetriminos;
 	char		buf[BUF_SIZE + 1];
 
-	tab = NULL;
-	fd = open(source_file, O_RDONLY); // on ouvre
+	fd = open(source_file, O_RDONLY);
 	if (fd == -1)
 	{
 		ft_putstr("open() failed\n");
 		return (NULL);
 	}
-	len_read = read(fd, buf, BUF_SIZE); // lecture du fichier : read renvoie la longueur lue 
-	buf[len_read] = '\0'; // on met /0 le dernier du tab 
-	if (close(fd) == -1) // close renvoie -1 si il arrive pas a fermer le fichier, c est juste par precaution a mon avis ca arrivera jamais (mais ils font ca dans le tuto ^^)
+	len_read = read(fd, buf, BUF_SIZE);
+	buf[len_read] = '\0';
+	if (close(fd) == -1)
 	{
 		ft_putstr("close() failed\n");
 		return (NULL);
 	}
-	if (!(tab = ft_bufsplit(buf))
+	nb_tetriminos = (len_read + 1) / 21;
+	if ((len_read + 1) % 21 || !(tab = ft_bufsplit(buf, nb_tetriminos)))
 		return (NULL);
 	return (tab);
 }

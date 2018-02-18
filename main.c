@@ -6,7 +6,7 @@
 /*   By: flecouey <flecouey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 22:23:44 by flecouey          #+#    #+#             */
-/*   Updated: 2017/12/09 18:47:27 by flecouey         ###   ########.fr       */
+/*   Updated: 2018/02/18 16:44:58 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,9 @@ int		main(int argc, char **argv)
 		ft_putstr("usage : ./fillit source_file\n");
 		return (0);
 	}
-	if(!(tab_input = ft_readfile(argv[1]))
-		return (0);
-	if (!ft_isvalid(tab_input))
+	if (!(tab_input = ft_readfile(argv[1]) || !ft_isvalid(tab_input)))
 	{
-		ft_putstr("error\n")
+		ft_putstr("error\n");
 		return (0);
 	}
 	tab_output = ft_fillit(tab_input);
