@@ -6,12 +6,12 @@
 /*   By: flecouey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 13:34:21 by flecouey          #+#    #+#             */
-/*   Updated: 2017/12/08 16:08:19 by flecouey         ###   ########.fr       */
+/*   Updated: 2018/02/18 16:56:52 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "fillit.h"
+#include "../libft.h"
+#include "../fillit.h"
 
 /*
 ** Retourne 1 si le tableau passe en parametre est valide.

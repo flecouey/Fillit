@@ -6,7 +6,7 @@
 /*   By: flecouey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 13:19:29 by flecouey          #+#    #+#             */
-/*   Updated: 2018/01/27 13:01:59 by flecouey         ###   ########.fr       */
+/*   Updated: 2018/02/18 17:56:03 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ size_t static   ft_linksnb(char **tetrimino, size_t line, size_t col)
 	size_t		j;
 
 	linksnb = 0;
-	i = line == 0 ? 0 : line - 1;
-	j = col == 0 ? 0 : col - 1;
+	i = (line == 0 ? 0 : line - 1);
+	j = (col == 0 ? 0 : col - 1);
 	while (i < line + 1 && i < 4)
 	{
 		if (tetrimino[i][col] == '#')
