@@ -6,7 +6,7 @@
 /*   By: flecouey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 13:12:31 by flecouey          #+#    #+#             */
-/*   Updated: 2018/01/27 13:07:27 by flecouey         ###   ########.fr       */
+/*   Updated: 2018/02/19 20:23:18 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int		ft_check_validchars(char **tetrimino)
 		col = 0;
 		while (tetrimino[line][col])
 		{
-			if (tetrimino[line][col] != '#' || tetrimino[line][col] != '.')
+			if (tetrimino[line][col] != '#' && tetrimino[line][col] != '.')
 				return (0);
 			col++;
 		}
