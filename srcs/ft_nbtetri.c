@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_test.c                                        :+:      :+:    :+:   */
+/*   ft_nbtetri.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flecouey <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: flecouey <flecouey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/08 13:52:15 by flecouey          #+#    #+#             */
-/*   Updated: 2018/02/20 21:08:30 by flecouey         ###   ########.fr       */
+/*   Created: 2018/02/21 19:44:19 by flecouey          #+#    #+#             */
+/*   Updated: 2018/02/21 19:46:18 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include "../fillit.h"
 
-int		main(int argc, char **argv)
+int		ft_nbtetri(char ***tab_input)
 {
-	(void)argc;
-	//ft_putnbr(ft_isvalid(ft_readfile(argv[1])));
-	ft_putnbr((int)ft_tablen2(ft_readfile(argv[1])));
-	return (0);
+	int		i;
+
+	i = 0;
+	while (tab_input[i])
+	{
+		i++;
+	}
+	return (i);
 }

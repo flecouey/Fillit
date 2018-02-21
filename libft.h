@@ -6,7 +6,7 @@
 /*   By: flecouey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 16:09:00 by flecouey          #+#    #+#             */
-/*   Updated: 2017/12/22 11:35:06 by flecouey         ###   ########.fr       */
+/*   Updated: 2018/02/21 19:38:30 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
 void				*ft_memmove(void *dst, const void *src, size_t len);
 void				*ft_memset(void *s, int c, size_t len);
+int					ft_nextsquare(int x);
 size_t				ft_npower(int n);
 void				ft_putchar(char c);
 void				ft_putchar_fd(char c, int fd);

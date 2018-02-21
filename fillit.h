@@ -6,7 +6,7 @@
 /*   By: flecouey <flecouey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 23:12:08 by flecouey          #+#    #+#             */
-/*   Updated: 2017/12/09 18:53:52 by flecouey         ###   ########.fr       */
+/*   Updated: 2018/02/21 20:28:55 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,14 @@
 # include <fcntl.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct	s_params
+{
+	int			nb_tetri;
+	int			i;
+	int			j;
+	int			k;
+}				t_params;
 
 int			ft_check_arrangement(char **tetrimino);
 int			ft_check_blocksnb(char **tetrimino);
