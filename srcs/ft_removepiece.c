@@ -1,41 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_taballoc.c                                      :+:      :+:    :+:   */
+/*   ft_removepiece.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flecouey <flecouey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/21 19:46:44 by flecouey          #+#    #+#             */
-/*   Updated: 2018/02/27 21:41:50 by flecouey         ###   ########.fr       */
+/*   Created: 2018/02/27 21:03:31 by flecouey          #+#    #+#             */
+/*   Updated: 2018/02/27 21:34:26 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include "../fillit.h"
 
-#define SIZE 26
-
-char	**ft_taballoc(void)
+char	**ft_placepiece(char ***tab_input, char **tab_output, t_params params)
 {
-	int		j;
-	int		k;
-	char	**tab_output;
+	t_issafe	s;
 
-	j = 0;
-	tab_output = NULL;
-	if (!(tab_output = ft_memalloc(sizeof(char*) * (SIZE + 1) )))
-		return (NULL);
-	while (j < (SIZE))
+	s.j_out = params.j;
+	s.k_out = params.k;
+	s.j_in = ft_tetrindex(tab_input, params) / 4;
+	s.k_in = ft_tetrindex(tab_input, params) % 4;
+	while (s.j_in < 4)
 	{
-		if (!(tab_output[j] = ft_memalloc(sizeof(char) * (SIZE + 1) )))
-			return (NULL);
-		k = 0;
-		while (k < SIZE)
+		while (s.k_in < 4)
 		{
-			tab_output[j][k] = '.';
-			k++;
+			if (tab_input[params.i][s.j_in][s.k_in] == '#')
+				tab_output[s.j_out][s.k_out] == '.';
+			s.k_in++;
+			s.k_out++;
 		}
-		j++;
+		s.k_out = params.k - ft_tetrindex(tab_input, params) % 4;
+		s.j_out++;
+		s.k_in = 0;
+		s.j_in++;
 	}
 	return (tab_output);
 }

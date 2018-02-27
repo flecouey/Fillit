@@ -1,5 +1,0 @@
-1) Commencer par la première ligne
-2) Si tous les tetriminos sont posés
-	return(tab_output)
-3) Sinon poser le tetrimino actuel le plus à gauche possible
-	a) Si cette position fit dans le plus petit carré marquer cette position

@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printoutput.c                                   :+:      :+:    :+:   */
+/*   ft_tetrindex.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flecouey <flecouey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/30 23:11:34 by flecouey          #+#    #+#             */
-/*   Updated: 2018/02/27 21:39:23 by flecouey         ###   ########.fr       */
+/*   Created: 2018/02/27 21:22:03 by flecouey          #+#    #+#             */
+/*   Updated: 2018/02/27 21:23:15 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include "../fillit.h"
 
-void	ft_printoutput(char **tab_output)
+int		ft_tetrindex(char ***tab_input, t_param params)
 {
 	int		j;
+	int		k;
 
 	j = 0;
-	while (tab_output[i])
+	while (tab_input[params.i][j])
 	{
-		ft_putstr(tab_output[i]);
-		ft_putchar('\n');
-		i++;
+		k = 0;
+		while (tab_input[params.i][j][k])
+		{
+			if (tab_input[params.i][j][k] == '#')
+				return (j*4 +  k);
+			k++;
+		}
+		j++;
 	}
+	return (-1);
 }

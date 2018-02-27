@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printoutput.c                                   :+:      :+:    :+:   */
+/*   ft_calcsquare.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flecouey <flecouey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/30 23:11:34 by flecouey          #+#    #+#             */
-/*   Updated: 2018/02/27 21:39:23 by flecouey         ###   ########.fr       */
+/*   Created: 2018/02/27 18:05:56 by flecouey          #+#    #+#             */
+/*   Updated: 2018/02/27 21:02:46 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include "../fillit.h"
 
-void	ft_printoutput(char **tab_output)
+int		ft_calcsquare(char **tab_output)
 {
 	int		j;
+	int		k;
+	int		k_len;
+	int		len_square;
 
-	j = 0;
-	while (tab_output[i])
+	j = ft_tablen(tab_output);
+	k_len = ft_strlen(tab_output[j]);
+	len_square = 0;
+	while (j >= 0)
 	{
-		ft_putstr(tab_output[i]);
-		ft_putchar('\n');
-		i++;
+		k = k_len - 1;
+		while (k >= len_square)
+		{
+			if (ft_isupper(tab_output[j][k]) && MAX(j, k) > len_square)
+				len_square = MAX(j, k);
+			k--;
+		}
+		j--;
 	}
+	return (len_square);
 }
