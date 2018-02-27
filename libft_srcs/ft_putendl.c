@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printoutput.c                                   :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flecouey <flecouey@student.42.fr>          +#+  +:+       +#+        */
+/*   By: flecouey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/30 23:11:34 by flecouey          #+#    #+#             */
-/*   Updated: 2018/02/27 21:39:23 by flecouey         ###   ########.fr       */
+/*   Created: 2017/11/17 15:20:24 by flecouey          #+#    #+#             */
+/*   Updated: 2017/12/09 18:48:38 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-#include "../fillit.h"
+#include "libft.h"
 
-void	ft_printoutput(char **tab_output)
+void	ft_putendl(char const *s)
 {
-	int		j;
-
-	j = 0;
-	while (tab_output[i])
-	{
-		ft_putstr(tab_output[i]);
-		ft_putchar('\n');
-		i++;
-	}
+	ft_putstr(s);
+	ft_putchar('\n');
 }

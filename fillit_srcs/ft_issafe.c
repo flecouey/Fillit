@@ -6,14 +6,14 @@
 /*   By: flecouey <flecouey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/22 11:13:46 by flecouey          #+#    #+#             */
-/*   Updated: 2018/02/27 21:23:42 by flecouey         ###   ########.fr       */
+/*   Updated: 2018/02/27 21:59:26 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include "../fillit.h"
 
-int			ft_issafe(char ***tab_input, char **tab_output, t_param params)
+int			ft_issafe(char ***tab_input, char **tab_output, t_params params)
 {
 	t_issafe	s;
 

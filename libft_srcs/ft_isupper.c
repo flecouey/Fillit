@@ -1,34 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tetrindex.c                                     :+:      :+:    :+:   */
+/*   ft_isupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flecouey <flecouey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/27 21:22:03 by flecouey          #+#    #+#             */
-/*   Updated: 2018/02/27 21:23:15 by flecouey         ###   ########.fr       */
+/*   Created: 2017/11/22 16:44:54 by flecouey          #+#    #+#             */
+/*   Updated: 2017/11/22 16:47:25 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-#include "../fillit.h"
-
-int		ft_tetrindex(char ***tab_input, t_param params)
+int		ft_isupper(int c)
 {
-	int		j;
-	int		k;
-
-	j = 0;
-	while (tab_input[params.i][j])
-	{
-		k = 0;
-		while (tab_input[params.i][j][k])
-		{
-			if (tab_input[params.i][j][k] == '#')
-				return (j*4 +  k);
-			k++;
-		}
-		j++;
-	}
-	return (-1);
+	if (c >= 65 && c <= 90)
+		return (1);
+	return (0);
 }

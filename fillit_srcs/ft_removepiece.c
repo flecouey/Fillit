@@ -6,14 +6,14 @@
 /*   By: flecouey <flecouey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/27 21:03:31 by flecouey          #+#    #+#             */
-/*   Updated: 2018/02/27 21:34:26 by flecouey         ###   ########.fr       */
+/*   Updated: 2018/02/27 22:19:06 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include "../fillit.h"
 
-char	**ft_placepiece(char ***tab_input, char **tab_output, t_params params)
+char	**ft_removepiece(char ***tab_input, char **tab_output, t_params params)
 {
 	t_issafe	s;
 
@@ -26,7 +26,7 @@ char	**ft_placepiece(char ***tab_input, char **tab_output, t_params params)
 		while (s.k_in < 4)
 		{
 			if (tab_input[params.i][s.j_in][s.k_in] == '#')
-				tab_output[s.j_out][s.k_out] == '.';
+				tab_output[s.j_out][s.k_out] = '.';
 			s.k_in++;
 			s.k_out++;
 		}
