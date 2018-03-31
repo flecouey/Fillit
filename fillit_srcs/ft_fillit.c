@@ -6,7 +6,7 @@
 /*   By: flecouey <flecouey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 23:22:24 by flecouey          #+#    #+#             */
-/*   Updated: 2018/03/30 17:54:16 by flecouey         ###   ########.fr       */
+/*   Updated: 2018/03/31 10:09:52 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,7 @@ char		**ft_fillit(char ***tab_input)
 		}
 		params.min_square++;
 	}
+	free(*temp);
+	free(temp);
 	return (*tab_output);
 }
