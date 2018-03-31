@@ -6,7 +6,7 @@
 #    By: flecouey <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/17 12:38:34 by flecouey          #+#    #+#              #
-#    Updated: 2018/03/30 20:26:03 by flecouey         ###   ########.fr        #
+#    Updated: 2018/03/31 09:07:24 by flecouey         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,8 +32,8 @@ FIL_SRCS = ft_check_arrangement.c \
 		   ft_tetrindex.c \
 		   main.c
 
-LIB_SRCS = ft_bzero.c \
-		   ft_atoi.c \
+LIB_SRCS = ft_atoi.c \
+		   ft_bzero.c \
 		   ft_divmod.c \
 		   ft_isalnum.c \
 		   ft_isalpha.c \
@@ -99,24 +99,25 @@ LIB_SRCS = ft_bzero.c \
 FIL_OBJS = $(FIL_SRCS:.c=.o)
 LIB_OBJS = $(LIB_SRCS:.c=.o)
 
-FIL_INC = fillit.h
-LIB_INC = libft.h
+FIL_INC = $(addprefix $(FIL_DIR)/, fillit.h)
+LIB_INC = $(addprefix $(LIB_DIR)/, libft.h)
+
+FIL_SRCS_ = $(addprefix $(FIL_DIR)/, $(FIL_SRCS))
+LIB_SRCS_ = $(addprefix $(LIB_DIR)/, $(LIB_SRCS))
 
 
 all: $(NAME)
 
 $(NAME):
-	cd $(LIB_DIR) && gcc -Wall -Wextra -Werror -c $(LIB_SRCS) -I $(LIB_INC)
-	cd $(LIB_DIR) && ar rc $(LIB_NAME) $(LIB_OBJS)
-	cd $(FIL_DIR) && gcc -Wall -Wextra -Werror -c $(FIL_SRCS) -I $(FIL_INC)
-	cd $(FIL_DIR) && gcc $(FIL_OBJS) -L../$(LIB_DIR) -lft -o $(NAME)
-	mv $(FIL_DIR)/$(NAME) .
+	gcc -Wall -Wextra -Werror -c $(LIB_SRCS_) -I $(LIB_INC)
+	ar rc $(LIB_NAME) $(LIB_OBJS)
+	gcc -Wall -Wextra -Werror -c $(FIL_SRCS_) -I $(FIL_INC)
+	gcc $(FIL_OBJS) -L. -lft -o $(NAME)
 
 clean:
-	cd $(LIB_DIR) && rm -f $(LIB_OBJS)
-	cd $(FIL_DIR) && rm -f $(FIL_OBJS)
+	rm -f $(LIB_OBJS) $(FIL_OBJS)
 
 fclean: clean
-	rm -f $(LIB_DIR)/$(LIB_NAME) $(NAME)
+	rm -f $(LIB_NAME) $(NAME)
 
 re : fclean all
