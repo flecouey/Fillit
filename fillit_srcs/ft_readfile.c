@@ -6,7 +6,7 @@
 /*   By: flecouey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/09 15:45:43 by flecouey          #+#    #+#             */
-/*   Updated: 2018/02/18 17:43:39 by flecouey         ###   ########.fr       */
+/*   Updated: 2018/03/31 14:40:37 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,14 +52,12 @@ char			***ft_readfile(char *source_file)
 	fd = open(source_file, O_RDONLY);
 	if (fd == -1)
 	{
-		ft_putstr("open() failed\n");
 		return (NULL);
 	}
 	len_read = read(fd, buf, BUF_SIZE);
 	buf[len_read] = '\0';
 	if (close(fd) == -1)
 	{
-		ft_putstr("close() failed\n");
 		return (NULL);
 	}
 	nb_tetriminos = (len_read + 1) / 21;
