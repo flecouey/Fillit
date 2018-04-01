@@ -6,7 +6,7 @@
 /*   By: flecouey <flecouey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 23:22:24 by flecouey          #+#    #+#             */
-/*   Updated: 2018/03/31 10:09:52 by flecouey         ###   ########.fr       */
+/*   Updated: 2018/04/01 16:05:26 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ static int	ft_solver(char ***tab_input, char ***tab_output, t_params params)
 		while (params.k < params.min_square)
 		{
 			if (ft_issafe(tab_input, *tab_output, params))
-			{		
+			{
 				*tab_output = ft_placepiece(tab_input, *tab_output, params);
-				params.i++;			
+				params.i++;
 				if (ft_solver(tab_input, tab_output, params))
 					return (1);
 				params.i--;
@@ -60,12 +60,11 @@ char		**ft_fillit(char ***tab_input)
 		{
 			*tab_output[0][params.min_square] = ft_itoa(params.min_square)[0];
 			if (ft_itoa(params.min_square)[1])
-				*tab_output[0][params.min_square + 1] = ft_itoa(params.min_square)[1];
+				*tab_output[0][params.min_square + 1] =
+												ft_itoa(params.min_square)[1];
 			return (*tab_output);
 		}
 		params.min_square++;
 	}
-	free(*temp);
-	free(temp);
 	return (*tab_output);
 }

@@ -6,7 +6,7 @@
 /*   By: flecouey <flecouey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 22:23:44 by flecouey          #+#    #+#             */
-/*   Updated: 2018/03/31 10:06:51 by flecouey         ###   ########.fr       */
+/*   Updated: 2018/04/01 16:08:21 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "fillit.h"
 
 /*
-** tab_input : chaque case du tableau contient un tetrimino forme a partir de strsplit.
+** tab_input : chaque case du tableau contient un tetrimino forme par strsplit.
 ** tab_output : tableau de chaines de caracteres representant l'affichage final.
 */
 
@@ -36,10 +36,5 @@ int		main(int argc, char **argv)
 	}
 	tab_output = ft_fillit(tab_input);
 	ft_printoutput(tab_output);
-	free(*tab_output);
-	free(tab_output);
-	free(**tab_input);
-	free(*tab_input);
-	free(tab_input);
 	return (0);
 }

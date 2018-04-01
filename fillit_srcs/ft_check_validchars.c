@@ -6,7 +6,7 @@
 /*   By: flecouey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 13:12:31 by flecouey          #+#    #+#             */
-/*   Updated: 2018/02/28 20:54:38 by flecouey         ###   ########.fr       */
+/*   Updated: 2018/04/01 14:36:27 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 #include "fillit.h"
 
 /*
-** Retourne 1 si le tetrimino passe en parametre ne contient que des caracteres valides.
+** Retourne 1 si le tetrimino passe en parametre
+** ne contient que des caracteres valides.
 ** Retourne 0 sinon.
 */
 
 int		ft_check_validchars(char **tetrimino)
-{	
+{
 	size_t		line;
 	size_t		col;
 

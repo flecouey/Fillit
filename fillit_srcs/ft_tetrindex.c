@@ -6,7 +6,7 @@
 /*   By: flecouey <flecouey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/27 21:22:03 by flecouey          #+#    #+#             */
-/*   Updated: 2018/02/27 21:58:09 by flecouey         ###   ########.fr       */
+/*   Updated: 2018/04/01 16:06:15 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int		ft_tetrindex(char ***tab_input, t_params params)
 		while (tab_input[params.i][j][k])
 		{
 			if (tab_input[params.i][j][k] == '#')
-				return (j*4 +  k);
+				return (j * 4 + k);
 			k++;
 		}
 		j++;

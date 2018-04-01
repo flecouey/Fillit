@@ -6,7 +6,7 @@
 /*   By: flecouey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 12:37:11 by flecouey          #+#    #+#             */
-/*   Updated: 2018/02/28 20:54:51 by flecouey         ###   ########.fr       */
+/*   Updated: 2018/04/01 14:35:46 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 #include "fillit.h"
 
 /*
-** Retourne 1 si le tetrimino passe en parametre compte exactement 4 lignes et 4 colonnes.
+** Retourne 1 si le tetrimino passe en parametre compte
+** exactement 4 lignes et 4 colonnes.
 ** Retourne 0 sinon.
 */
 

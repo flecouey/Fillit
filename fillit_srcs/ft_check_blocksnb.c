@@ -6,7 +6,7 @@
 /*   By: flecouey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 12:49:34 by flecouey          #+#    #+#             */
-/*   Updated: 2018/02/28 20:52:56 by flecouey         ###   ########.fr       */
+/*   Updated: 2018/04/01 16:01:38 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 #include "fillit.h"
 
 /*
-** Retourne 1 si le tetrimino passe en parametre compte exactement 4 caracteres '#'.
+** Retourne 1 si le tetrimino passe en parametre
+** compte exactement 4 caracteres '#'.
 ** Retourne 0 sinon.
 */
 
 int		ft_check_blocksnb(char **tetrimino)
-{	
+{
 	size_t		blocksnb;
 	size_t		line;
 	size_t		col;

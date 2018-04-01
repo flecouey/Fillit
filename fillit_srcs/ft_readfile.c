@@ -6,7 +6,7 @@
 /*   By: flecouey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/09 15:45:43 by flecouey          #+#    #+#             */
-/*   Updated: 2018/03/31 14:40:37 by flecouey         ###   ########.fr       */
+/*   Updated: 2018/04/01 16:07:19 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ static char		***ft_bufsplit(const char *buf, size_t nb_tetriminos)
 		{
 			if (!(tab[i][j] = ft_memalloc(sizeof(char) * (4 + 1))))
 				return (NULL);
-			tab[i][j] = ft_strsub(buf, i*20 + j*5 + i*(i == 0 ? 0 : 1), 4);
+			tab[i][j] = ft_strsub(buf, i * 20 + j * 5 +
+													i * (i == 0 ? 0 : 1), 4);
 			j++;
 		}
 		i++;
