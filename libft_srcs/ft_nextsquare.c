@@ -6,14 +6,14 @@
 /*   By: flecouey <flecouey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 20:48:03 by flecouey          #+#    #+#             */
-/*   Updated: 2018/02/21 19:41:35 by flecouey         ###   ########.fr       */
+/*   Updated: 2018/04/04 14:51:38 by flecouey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- * Renvoie la racine du carré directement supérieur ou égal à x.
+** Renvoie la racine du carré directement supérieur ou égal à x.
 */
 
 int		ft_nextsquare(int x)
